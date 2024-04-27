@@ -5,10 +5,10 @@ import (
 	"net/http"
 )
 
-
 var files = []string{
-	"./ui/html/pages/base.tmpl",
-	"./ui/html/pages/layout.tmpl",
+	"./ui/html/pages/base.tmpl.html",
+	"./ui/html/pages/layout.tmpl.html",
+	"./ui/html/pages/page1.tmpl.html",
 }
 
 // RenderTemplate renders a template
@@ -17,4 +17,3 @@ func RenderTemplate(w http.ResponseWriter, r *http.Request, d any) {
 
 	tmpl.ExecuteTemplate(w, "base", d)
 }
-

@@ -44,7 +44,7 @@ func (m *Repository) HandleClickEvents(w http.ResponseWriter, r *http.Request) {
 
 	if v_id == "" {
 		_ = fmt.Errorf("no handler for route")
-		return 
+		return
 	}
 
 	// route request to appropriate handler
@@ -60,3 +60,7 @@ func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, m.App)
 }
 
+func (m *Repository) Test(w http.ResponseWriter, r *http.Request) {
+
+	fmt.Println("This is a test")
+}

@@ -13,14 +13,14 @@ func initRouteHandlers() {
 	app.ViewCache["lyoutvw"] = layoutvw.AppLayoutVw.RegisterView(app)
 }
 
-
 func routes(app *config.AppConfig) http.Handler {
 	mux := chi.NewRouter()
 
 	mux.Get("/", handlers.Repo.Home)
+	mux.Get("/test", handlers.Repo.Test)
 
-	fileServer := http.FileServer(http.Dir("./ui/static/"))
-	mux.Handle("/static/*", http.StripPrefix("/static", fileServer))
+	fileServer := http.FileServer(http.Dir("./ui/html/"))
+	mux.Handle("/html/*", http.StripPrefix("/html", fileServer))
 
 	return mux
 }
