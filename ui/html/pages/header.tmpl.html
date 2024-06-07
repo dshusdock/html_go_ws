@@ -1,0 +1,22 @@
+{{define "header"}}
+
+<div class="header">
+  <div class="header__leftside">
+    <p class="header__testmsg">ExOps</p>
+    <button type="button" name="myButton" class="header__button">Button</button>
+  </div>
+  <div class="header__center">
+
+
+  </div>
+  <div class="header__rightside">
+    <button type="button" class="header__button2" hx-get="/test" hx-swap="none" hx-trigger="click"
+      hx-target="#main" hx-vars='{ "view_id": "sidenav", "type": "button", "label": "Apply", }'>
+      System Info
+    </button>
+    <button type="button" class="header__button-logout">Logout</button>
+  </div>
+
+</div>
+
+{{end}}

@@ -1,37 +1,14 @@
 {{define "layout"}}
 
-<div class="grid grid-cols-12 grid-rows-12 gap-1 bg-gray-800">
-
-  <aside class="col-start-1 col-span-2 row-start-1 row-span-12">
-    {{template "page1" .}}
-  </aside>
-
-  <header class="mt-1 col-start-3 col-span-10 row-start-1 row-span-1 ">
-    <div class="h-12 bg-indigo-800 rounded-md m-2 shadow-2xl">
-      This is a testing this thingy
-    </div>
-
-  </header>
-
-  <main class="col-start-3 col-span-10 row-start-2 row-span-10 bg-sky-500">
-    <div class="mt-40 ms-40">
-      <select>
-        <option value="">Lorem.</option>
-        <option value="">Voluptate.</option>
-        <option value="">Quia.</option>
-        <option value="">Officia.</option>
-        <option value="">Perferendis.</option>
-        <option value=""></option>
-      </select>
-      <span class="custom_arrow"></span>
-    </div>
-  </main>
-
+<div class="layout">
+  <div class="container">
+    {{ template "header" . }}
+    <div class="sidenav"></div>
+    <div id="main" class="main"></div>
+  </div>
+  <div class="testthis">
+    This is a test
+  </div>
 </div>
-
-
-
-
-
 
 {{ end }}

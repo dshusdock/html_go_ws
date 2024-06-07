@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"dshusdock/tw_prac1/config"
+	"dshusdock/tw_prac1/internal/apis"
 	"dshusdock/tw_prac1/internal/constants"
 	"dshusdock/tw_prac1/internal/render"
 	"fmt"
@@ -38,6 +39,8 @@ func (m *Repository) HandleClickEvents(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	fmt.Println("This is a test")
 	data := r.PostForm
 	data.Add("event", constants.EVENT_CLICK)
 	v_id := data.Get("view_id")
@@ -62,5 +65,14 @@ func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
 
 func (m *Repository) Test(w http.ResponseWriter, r *http.Request) {
 
-	fmt.Println("This is a test")
+	fmt.Println("This is a tester")
+
+	dbh, err := apis.OpenDB("127.0.0.1", "testdb")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	uu, _ := apis.GetUserInfo(dbh)
+
+	apis.DisplayUsers(uu)
 }

@@ -9,6 +9,7 @@ var files = []string{
 	"./ui/html/pages/base.tmpl.html",
 	"./ui/html/pages/layout.tmpl.html",
 	"./ui/html/pages/page1.tmpl.html",
+	"./ui/html/pages/header.tmpl.html",
 }
 
 // RenderTemplate renders a template

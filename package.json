@@ -4,7 +4,7 @@
   "description": "",
   "main": "tailwind.config.js",
   "scripts": {
-     "compile:sass": "node-sass ui/html/sass/main.scss ui/html/css/style.css -w"
+    "compile:sass": "node-sass ui/html/sass/main.scss ui/html/css/style.css -w"
   },
   "author": "",
   "license": "ISC",
